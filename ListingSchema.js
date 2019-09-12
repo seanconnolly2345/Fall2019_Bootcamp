@@ -9,6 +9,10 @@ var mongoose = require('mongoose'),
 var listingSchema = new Schema({
   /* Your code for a schema here */ 
   //Check out - https://mongoosejs.com/docs/guide.html
+  code: String,
+  code: String,
+  coordinates: [{latitude: mongoose.Decimal128, longitude: mongoose.Decimal128}],
+  address: String,
 
 });
 
