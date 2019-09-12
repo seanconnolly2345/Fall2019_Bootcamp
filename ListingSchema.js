@@ -11,17 +11,18 @@ var listingSchema = new Schema({
   //Check out - https://mongoosejs.com/docs/guide.html
   code: String,
   code: String,
-  coordinates: [{latitude: mongoose.Decimal128, longitude: mongoose.Decimal128}],
+  coordinates: {latitude: mongoose.Decimal128, longitude: mongoose.Decimal128},
   address: String,
+  created_at: Date
 
 });
 
 /* Create a 'pre' function that adds the updated_at (and created_at if not already there) property 
    See https://scotch.io/tutorials/using-mongoosejs-in-node-js-and-mongodb-applications
 */
-listingSchema.pre('save', function(next) {
-  /* your code here */
-});
+//listingSchema.pre('save', function(next) { 
+ // listingSchema.add({updated_at: Date.now})
+//});
 
 /* Use your schema to instantiate a Mongoose model */
 //Check out - https://mongoosejs.com/docs/guide.html#models
