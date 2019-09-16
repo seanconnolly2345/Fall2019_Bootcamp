@@ -13,7 +13,7 @@ var listingSchema = new Schema({
  
   code: String, 
   name: String,
-  coordinates: {latitude: mongoose.Decimal128, longitude: mongoose.Decimal128},
+  coordinates: {latitude: Number, longitude: Number},
   address: String,
   created_at: Date,
   updated_at:Date,

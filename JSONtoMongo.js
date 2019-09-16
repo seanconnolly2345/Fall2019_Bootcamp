@@ -26,12 +26,11 @@ mongoose.connect(config.db.uri, { useNewUrlParser: true ,useUnifiedTopology: tru
   Remember that we needed to read in a file like we did in Bootcamp Assignment #1.
  */
 
+//var list = mongoose.model('List', Listing);
 
 fs.readFile('listings.json', 'utf8', function(err, data) {
-   //Check for errors
   if(err) throw err;
 
-  //Save the data in the listingData variable already defined
   listingData = JSON.parse(data);   
 
   listingData.entries.forEach(function(entries) {
